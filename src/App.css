@@ -1,5 +1,26 @@
+html {
+  font-size: 125%;
+}
+
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1500px;
+  width: 80%;
+}
+
+
 .App {
   text-align: center;
+}
+
+body {
+  background-color: #C8DAD3;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #707070;
 }
 
 .App-logo {
@@ -19,4 +40,29 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.topicButton {
+  color:#707070;
+  width: 300px;
+  font-size: 1.2rem;
+  border: 1px solid #707070;
+  border-radius: 0px;
+  padding: 25px;
+  margin-top: 20px;
+
+}
+.blueButton {
+  margin-right: 20px;
+  background-color:#C1E0FF; 
+}
+
+.blueButton:active{
+  background-color:#46A2FF;
+}
+.redButton {
+  background-color: #FFB5B5;
+}
+.redButton:active {
+  background-color: #FF7474;
 }

@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/would-you-rather-game/static/css/main.67db4019.chunk.css",
-    "main.js": "/would-you-rather-game/static/js/main.da31b947.chunk.js",
-    "main.js.map": "/would-you-rather-game/static/js/main.da31b947.chunk.js.map",
+    "main.css": "/would-you-rather-game/static/css/main.8f3c50df.chunk.css",
+    "main.js": "/would-you-rather-game/static/js/main.6d54c536.chunk.js",
+    "main.js.map": "/would-you-rather-game/static/js/main.6d54c536.chunk.js.map",
     "runtime-main.js": "/would-you-rather-game/static/js/runtime-main.1c737ab7.js",
     "runtime-main.js.map": "/would-you-rather-game/static/js/runtime-main.1c737ab7.js.map",
-    "static/js/2.6957b9f5.chunk.js": "/would-you-rather-game/static/js/2.6957b9f5.chunk.js",
-    "static/js/2.6957b9f5.chunk.js.map": "/would-you-rather-game/static/js/2.6957b9f5.chunk.js.map",
+    "static/js/2.3d43ed14.chunk.js": "/would-you-rather-game/static/js/2.3d43ed14.chunk.js",
+    "static/js/2.3d43ed14.chunk.js.map": "/would-you-rather-game/static/js/2.3d43ed14.chunk.js.map",
     "index.html": "/would-you-rather-game/index.html",
-    "precache-manifest.2687a3a1268de05e3294599406685142.js": "/would-you-rather-game/precache-manifest.2687a3a1268de05e3294599406685142.js",
+    "precache-manifest.47c87d671eb9db7e85499b1f2f717550.js": "/would-you-rather-game/precache-manifest.47c87d671eb9db7e85499b1f2f717550.js",
     "service-worker.js": "/would-you-rather-game/service-worker.js",
-    "static/css/main.67db4019.chunk.css.map": "/would-you-rather-game/static/css/main.67db4019.chunk.css.map"
+    "static/css/main.8f3c50df.chunk.css.map": "/would-you-rather-game/static/css/main.8f3c50df.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.1c737ab7.js",
-    "static/js/2.6957b9f5.chunk.js",
-    "static/css/main.67db4019.chunk.css",
-    "static/js/main.da31b947.chunk.js"
+    "static/js/2.3d43ed14.chunk.js",
+    "static/css/main.8f3c50df.chunk.css",
+    "static/js/main.6d54c536.chunk.js"
   ]
 }

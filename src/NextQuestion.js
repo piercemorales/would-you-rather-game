@@ -5,8 +5,9 @@ class nextQuestion extends Component {
 
   nextQuestScroll = e => {
     e.preventDefault();
-    jump(900, {
-      durtion: 1000,
+    const height = window.screen.height
+    jump(height, {
+      duration: 1000,
       offset: 0,
       callback: undefined,
       a11y: false

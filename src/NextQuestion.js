@@ -5,7 +5,7 @@ class nextQuestion extends Component {
 
   nextQuestScroll = e => {
     e.preventDefault();
-    const height = window.screen.height
+    const height = document.querySelector('form').clientHeight
     jump(height, {
       duration: 1000,
       offset: 0,

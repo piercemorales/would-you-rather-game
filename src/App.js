@@ -78,7 +78,6 @@ class App extends Component {
         currentQuestion: questionNumber
         
       });
-      // console.log(this.state.currentQuestion);
     });
     
   }
@@ -97,10 +96,10 @@ class App extends Component {
               const redVote = value.vote2;
               const currentQ = index;
               const voted = this.state.currentQuestion[index].voted;
+
               return (
                 // topic vote buttons
                 <form>
-                  
                   <button
                     id={currentQ}
                     className="blueButton topicButton"

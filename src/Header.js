@@ -8,7 +8,7 @@ class Header extends Component {
       e.preventDefault()
       jump(".question", {
         duration: 1000,
-        offset: 0,
+        offset: -20,
         callback: undefined,
         a11y: false
       });

@@ -19,7 +19,7 @@ class Header extends Component {
           <div className="headerContent">
             <h1>Choice</h1>
             <p>
-              Choose one of two options you prefer and see how many others voted
+              Choose one of the two options that you prefer more and see how many others voted
               with or against you!
             </p>
             <a onClick={this.scrollToQuestion} href="#questionSection" className="playBtn">

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import firebase from './firebase'
 import Header from './Header'
+import NextQuestion from './NextQuestion'
 
 
 
@@ -88,20 +89,19 @@ class App extends Component {
           <Header />
           <section id="questionSection" className="question">
             <h2>Choose Between...</h2>
-            {
-              //mapping through the array to get required values
+            {//mapping through the array to get required values
             this.state.questionArray.map((value, index) => {
               const blueOption = value.option1;
               const redOption = value.option2;
               const blueVote = value.vote1;
               const redVote = value.vote2;
               const currentQ = index;
-              const voted = this.state.currentQuestion[index].voted
+              const voted = this.state.currentQuestion[index].voted;
               return (
                 // topic vote buttons
                 <form>
+                  
                   <button
-                    key=""
                     id={currentQ}
                     className="blueButton topicButton"
                     value="vote1"
@@ -127,16 +127,32 @@ class App extends Component {
                     </p>
                   </button>
 
-                  <div className="nextQContainer">
-                    <a className="nextQuestionBtn" href="#nextQuestion">
-                      Next Question
-                    </a>
-                  </div>
+                  <NextQuestion />
                 </form>
               );
             })}
+            <div className="endSection">
+              <h2>
+                There are no more questions!{" "}
+                <span>Come back soon for more!</span>
+              </h2>
+            </div>
           </section>
         </div>
+        <footer className="footerSection">
+          <div className="footerContent">
+            <p>
+              <a
+                href="https://piercemorales.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Pierce Morales
+              </a>{" "}
+              © 2019
+            </p>
+          </div>
+        </footer>
       </div>
     );
   }

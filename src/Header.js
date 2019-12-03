@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
-
+import jump from "jump.js";
 
 class Header extends Component {
   
+
+    scrollToQuestion = (e) => {
+      e.preventDefault()
+      jump(".question", {
+        duration: 1000,
+        offset: 0,
+        callback: undefined,
+        a11y: false
+      });
+    }
     render() {
       
         return (
@@ -12,7 +22,7 @@ class Header extends Component {
               Choose one of two options you prefer and see how many others voted
               with or against you!
             </p>
-            <a href="#questionSection" className="playBtn">
+            <a onClick={this.scrollToQuestion} href="#questionSection" className="playBtn">
               play
             </a>
           </div>

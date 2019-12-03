@@ -8,18 +8,14 @@ import Header from './Header'
 class App extends Component {
   constructor() {
     super();
-
     this.state = {
       questionArray: [],
       userNameArray:[],
       redVoteIncrement: 0,
       blueVoteIncrement: 0,
       currentQuestion: [],
-      displayVotes: false,
     }
   }
-
-
 
 
   //increment button counter function
@@ -31,9 +27,6 @@ class App extends Component {
 
     const newCurrentQuestion = [...this.state.currentQuestion]
     newCurrentQuestion[e.currentTarget.id].voted = true
-
-
-
     this.setState(
       {
         blueVoteIncrement: vote,
@@ -50,16 +43,11 @@ class App extends Component {
     const dbRef = firebase.database().ref('questionObject');
     
     dbRef.child(`${this.state.currentQuestion[e.currentTarget.id].qNumber}`).update({ vote2: vote});
-    // this.state.currentQuestion[e.currentTarget.id].voted ? 
-
-
     const newCurrentQuestion = [...this.state.currentQuestion];
     newCurrentQuestion[e.currentTarget.id].voted = true;
-
     this.setState({
       redVoteIncrement: vote,
       currentQuestion: newCurrentQuestion
-
     })
   }
 
@@ -74,8 +62,6 @@ class App extends Component {
       const questionObject = firebaseInfo.questionObject
       //grabbing original question object from firebase and storing into a variable 
       const questionContent = Object.values(questionObject)
-
-
       const questionNumber = []
       for(let key in questionObject){
         const questionNumbers = {
@@ -95,18 +81,14 @@ class App extends Component {
     });
     
   }
-
   render(){
-
     return (
       <div className="App">
         <div className="wrapper">
           <Header />
           <section id="questionSection" className="question">
             <h2>Choose Between...</h2>
-
             {
-
               //mapping through the array to get required values
             this.state.questionArray.map((value, index) => {
               const blueOption = value.option1;
@@ -115,12 +97,11 @@ class App extends Component {
               const redVote = value.vote2;
               const currentQ = index;
               const voted = this.state.currentQuestion[index].voted
-              console.log(voted);
-              
               return (
                 // topic vote buttons
                 <form>
                   <button
+                    key=""
                     id={currentQ}
                     className="blueButton topicButton"
                     value="vote1"
@@ -141,10 +122,17 @@ class App extends Component {
                     disabled={voted ? true : false}
                   >
                     {redOption}{" "}
-                    <p className={`${voted ? "show" : "voteDisplay"}`}>{redVote} votes</p>
+                    <p className={`${voted ? "show" : "voteDisplay"}`}>
+                      {redVote} votes
+                    </p>
                   </button>
+
+                  <div className="nextQContainer">
+                    <a className="nextQuestionBtn" href="#nextQuestion">
+                      Next Question
+                    </a>
+                  </div>
                 </form>
-                // have another option voted: false direct the onClick to update voted: true, use conditional to see if the button is voted true disable the button and keep the button pressed
               );
             })}
           </section>
